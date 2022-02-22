@@ -38,7 +38,19 @@ namespace FilmesApi.Controllers
             
             return NotFound();
 
+        }
 
+        [HttpPut("{id}")]
+        public IActionResult DeletaFilmePorId([FromBody]Filme filme, int id)
+        {
+            var result = _filmes.FirstOrDefault(x => x.Id == id);
+            if (result != null)
+            {
+                _filmes.Add(filme);
+                return Ok(filme);         
+            }
+
+            return NotFound();
         }
     }
 }
