@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\magno\\dev\\alura\\FilmesApi\\FilmesApi\\FilmesApi.csproj": {}
+    "C:\\Users\\magno\\dev\\alura\\Filmes-Api\\FilmesApi\\FilmesApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\magno\\dev\\alura\\FilmesApi\\FilmesApi\\FilmesApi.csproj": {
+    "C:\\Users\\magno\\dev\\alura\\Filmes-Api\\FilmesApi\\FilmesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\magno\\dev\\alura\\FilmesApi\\FilmesApi\\FilmesApi.csproj",
+        "projectUniqueName": "C:\\Users\\magno\\dev\\alura\\Filmes-Api\\FilmesApi\\FilmesApi.csproj",
         "projectName": "FilmesApi",
-        "projectPath": "C:\\Users\\magno\\dev\\alura\\FilmesApi\\FilmesApi\\FilmesApi.csproj",
+        "projectPath": "C:\\Users\\magno\\dev\\alura\\Filmes-Api\\FilmesApi\\FilmesApi.csproj",
         "packagesPath": "C:\\Users\\magno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\magno\\dev\\alura\\FilmesApi\\FilmesApi\\obj\\",
+        "outputPath": "C:\\Users\\magno\\dev\\alura\\Filmes-Api\\FilmesApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\magno\\AppData\\Roaming\\NuGet\\NuGet.Config",

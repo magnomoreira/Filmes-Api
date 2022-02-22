@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FilmesApi.Controllers
 {
@@ -9,20 +10,32 @@ namespace FilmesApi.Controllers
     [ApiController]
     public class FilmeController : ControllerBase
     {
-        private readonly List<Filme> _filmes = new List<Filme>();
+        private static List<Filme> _filmes = new List<Filme>();
+        private static int id;
 
         [HttpPost]
-        public void AdicionarFilme([FromBody]Filme filme)
+        public IActionResult AdicionarFilme([FromBody]Filme filme)
         {
+            filme.Id = id++;
             _filmes.Add(filme);
-            Console.WriteLine(filme.Titulo);
+
+            return CreatedAtAction(nameof(RecuperaFilmePorId), new { id = filme.Id }, filme);
 
         }
 
         [HttpGet]
-        public IEnumerable<Filme> RecuperaFilme()
+        public IActionResult RecuperaFilme()
         {
-            return _filmes;
+            return Ok(_filmes);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult RecuperaFilmePorId(int id)
+        {
+            var response = _filmes.FirstOrDefault(x => x.Id == id);
+            if (response != null) return Ok(_filmes);
+
+            return NotFound();
         }
     }
 }
